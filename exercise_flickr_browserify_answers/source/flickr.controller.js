@@ -1,5 +1,5 @@
 
-module.exports = function Controller($scope, flickrService) {
+module.exports = function($scope, flickrService) {
   $scope.tag = "";
   var showSpinner = () => $scope.spinner = true;
   var hideSpinner = () => $scope.spinner = false;

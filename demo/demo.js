@@ -1,27 +1,4 @@
-// Scope is a tree
-// Isolate scope creates a new scope, not attached to the tree
-// Uses of isolate scope
-// Don't overuse isolate scope
-// Create an isolate scope
-// Isolate scope only applies to the template, not the transclusion
-// * Isolate scope '@' lets us set to a value
-// @ accepts an expression. This creates a one way binding
-// = lets us bind to a value in the parent scope.
-// =value will bind to an arbitrary value
 
-
-angular.module('app', [])
-  .controller('cheeseController', function($scope) {
-    $scope.cheese = "Gouda";
-  })
-  .directive('cheeseDirective', function() {
-    return {
-      scope: {
-        cheese: '=cheeseName'
-      },
-      template: "Hello from the Cheese Directive: <input ng-model='cheese' />{{cheese}}"
-    }
-  });
 
 
 
